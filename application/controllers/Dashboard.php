@@ -5,6 +5,9 @@ class Dashboard extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		if(null == $this->session->userdata('uid')) {
+			header("Location: ".site_url()."");
+		}
 		$this->output->delete_cache();
 	}
 

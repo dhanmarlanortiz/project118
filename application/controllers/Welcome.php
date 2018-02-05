@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function index() {
+		// session_destroy();
 		if(null !== $this->input->post('login')) {
 			/* Input validation */
 			$this->form_validation->set_rules('password', 'Password', 'required|alpha_dash|max_length[30]');
