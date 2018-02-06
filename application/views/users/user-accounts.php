@@ -1,11 +1,11 @@
 <div class="container">
-	<div class="row">
-		<div class='col-sm-12'>
-			<h1 class="page-header">User Accounts</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class='col-sm-6 col-md-4'>
+     <div class="row">
+          <div class="col-xs-12 col-sm-3">
+               <?php
+                    echo $menu;
+                ?>
+          </div>
+          <div class="col-xs-12 col-sm-4">
 			<?php
 				if(isset($form)) {
 					echo $form;
@@ -17,21 +17,19 @@
 					}
 				}
 				else {
-					echo "Page not found."; 
+					echo "Page not found.";
+				}
+			?>
+          </div>
+		<div class="col-xs-12 col-sm-5">
+			<?php
+				if(isset($user_table)) {
+					echo $user_table;
+				}
+				else {
+					echo "No records found.";
 				}
 			?>
 		</div>
-		<div class="col-sm-6 col-md-8">
-			<h3 class="section-title">Existing Users</h3>
-				<?php
-					if(isset($user_table)) {
-						echo $user_table;
-					}
-					else {
-						echo "No records found."; 
-					}
-				?>
-		</div>
-	</div>
+     </div>
 </div>
-

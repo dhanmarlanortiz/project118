@@ -17,4 +17,5 @@ PROJECT118.dashboard = (function($) {
 
 jQuery(document).ready(function() {
 	PROJECT118.dashboard.listSlide();
+	$(".login-form").attr("autocomplete", "off"); 
 });

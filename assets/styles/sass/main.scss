@@ -2,6 +2,8 @@ $helvetica: Arial, Helvetica, sans-serif;
 $black: "Arial Black", Gadget, sans-serif;
 $blue: #268cb7;
 $cyan: #3f939e;
+@import "libs/fonts";
+@import "modules/payroll";
 
 .login-form, .user-form {
     .form-sub {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2018 at 10:45 AM
+-- Generation Time: Feb 06, 2018 at 10:53 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -90,6 +90,32 @@ INSERT INTO `payrol_entries_earnings` (`id`, `name`) VALUES
 (12, 'Deduction Absences'),
 (13, 'Deduction Late');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payrol_payslip_deductions`
+--
+
+CREATE TABLE `payrol_payslip_deductions` (
+  `id` int(11) NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `amount` float NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payrol_payslip_earnings`
+--
+
+CREATE TABLE `payrol_payslip_earnings` (
+  `id` int(11) NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `amount` float NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -113,6 +139,20 @@ ALTER TABLE `payrol_entries_earnings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `payrol_payslip_deductions`
+--
+ALTER TABLE `payrol_payslip_deductions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `entry_fk` (`entry_id`);
+
+--
+-- Indexes for table `payrol_payslip_earnings`
+--
+ALTER TABLE `payrol_payslip_earnings`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `entry_fk` (`entry_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -133,6 +173,18 @@ ALTER TABLE `payrol_entries_deductions`
 --
 ALTER TABLE `payrol_entries_earnings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `payrol_payslip_deductions`
+--
+ALTER TABLE `payrol_payslip_deductions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `payrol_payslip_earnings`
+--
+ALTER TABLE `payrol_payslip_earnings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,4 +1,4 @@
-<br>
+<!-- <br>
 <div class="container-fluid">
      <div class="row">
           <div class="col-xs-12 col-sm-2">
@@ -32,4 +32,16 @@
           </div>
      </div>
 
+</div> -->
+
+<div class="container">
+     <div class="row">
+          <div class="col-xs-12 col-sm-3">
+               <?php
+                    echo $menu;
+                ?>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+          </div>
+     </div>
 </div>

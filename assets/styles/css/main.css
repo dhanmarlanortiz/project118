@@ -1,11 +1,57 @@
-/* line 7, ../sass/main.scss */
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* PAYROLL SCSS */
+/* line 3, ../sass/modules/_payroll.scss */
+.create-payslip label {
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0px;
+  width: 100%;
+  max-width: 250px;
+  float: left;
+  clear: left;
+  text-align: right;
+  padding-right: 10px;
+  vertical-align: middle;
+  height: 35px;
+  padding-top: 8px;
+}
+/* line 19, ../sass/modules/_payroll.scss */
+.create-payslip input {
+  border-radius: 3px;
+  height: 35px;
+  border: solid 1px #cccccc;
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 15px;
+  padding: 0 5px;
+  float: left;
+  text-align: right;
+}
+/* line 30, ../sass/modules/_payroll.scss */
+.create-payslip input[type='submit'], .create-payslip input[type='date'] {
+  text-align: center;
+}
+/* line 33, ../sass/modules/_payroll.scss */
+.create-payslip .pee-header, .create-payslip .ped-header {
+  float: left;
+  clear: left;
+}
+
+/* line 9, ../sass/main.scss */
 .login-form .form-sub, .user-form .form-sub {
   color: #444444;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   opacity: 0.6;
 }
-/* line 13, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 .login-form .email, .login-form .password, .login-form .username, .user-form .email, .user-form .password, .user-form .username {
   height: 45px;
   border: solid 1px #3f939e;
@@ -14,19 +60,19 @@
   background-size: contain;
   padding-left: 50px;
 }
-/* line 21, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 .login-form .email, .user-form .email {
   background-image: url("../images/icon-envelope.jpg");
 }
-/* line 24, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .login-form .username, .user-form .username {
   background-image: url("../images/icon-user.jpg");
 }
-/* line 27, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 .login-form .password, .user-form .password {
   background-image: url("../images/icon-lock.jpg");
 }
-/* line 30, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 .login-form .submit, .user-form .submit {
   background-color: #3f939e;
   border: solid 1px #3f939e;
@@ -37,30 +83,30 @@
   font-size: 20px;
   text-transform: uppercase;
 }
-/* line 40, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 .login-form .submit:hover, .login-form .submit:focus, .user-form .submit:hover, .user-form .submit:focus {
   opacity: 0.8;
 }
-/* line 44, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 .login-form .btn-cyan, .login-form .btn-normal, .user-form .btn-cyan, .user-form .btn-normal {
   border: solid 1px #3f939e;
 }
-/* line 46, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .login-form .btn-cyan:hover, .login-form .btn-normal:hover, .user-form .btn-cyan:hover, .user-form .btn-normal:hover {
   opacity: 0.8;
 }
-/* line 50, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 .login-form .btn-cyan, .user-form .btn-cyan {
   background-color: #3f939e;
   color: #fff;
 }
-/* line 54, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 .login-form .btn-normal, .user-form .btn-normal {
   background-color: #fff;
   color: #3f939e;
 }
 
-/* line 59, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .page-header {
   color: #3f939e;
   font-family: Arial, Helvetica, sans-serif;
@@ -68,19 +114,19 @@
   margin-bottom: 30px;
 }
 
-/* line 65, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 .section-title {
   color: #3f939e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-/* line 70, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 .myTable {
   border: dashed 1px #3f939e;
   margin-top: 15px;
 }
-/* line 73, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .myTable thead tr th {
   font-size: 16px;
   color: #fff;
@@ -89,7 +135,7 @@
   border-bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* line 81, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .myTable tbody tr td {
   border-top: 0;
   font-family: Arial, Helvetica, sans-serif;

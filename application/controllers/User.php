@@ -54,45 +54,45 @@ class User extends CI_Controller {
 
 		/* Create form */
 		$form = 	array('class' => 'form-horizontal user-form');
-		$username = array('name' => 'username', 
-						'id' => 'username', 
-						'value' => $default_username, 'maxlength' => '30', 
-						'placeholder' => 'Username', 
-						'class' => 'form-control username', 
+		$username = array('name' => 'username',
+						'id' => 'username',
+						'value' => $default_username, 'maxlength' => '30',
+						'placeholder' => 'Username',
+						'class' => 'form-control username',
 						'style' => ''
 					);
-		$email = 	array('name' => 'email', 
-						'id' => 'email', 
-						'value' => $default_email, 'maxlength' => '50', 
-						'placeholder' => 'Email Address', 
-						'class' => 'form-control email', 
+		$email = 	array('name' => 'email',
+						'id' => 'email',
+						'value' => $default_email, 'maxlength' => '50',
+						'placeholder' => 'Email Address',
+						'class' => 'form-control email',
 						'style' => ''
 					);
-		$password1 = array('name' => 'password', 
-						'id' => 'password', 
-						'type' => 'password', 
-						'maxlength' => '30', 
-						'placeholder' => 'Password', 
-						'class' => 'form-control password',	'size' => '30', 
+		$password1 = array('name' => 'password',
+						'id' => 'password',
+						'type' => 'password',
+						'maxlength' => '30',
+						'placeholder' => 'Password',
+						'class' => 'form-control password',	'size' => '30',
 						'style' => ''
 					);
-		$password2 = array('name' => 'password2', 
-						'id' => 'password2', 
-						'type' => 'password', 
-						'maxlength' => '30', 
-						'placeholder' => 'Password Confirm', 
+		$password2 = array('name' => 'password2',
+						'id' => 'password2',
+						'type' => 'password',
+						'maxlength' => '30',
+						'placeholder' => 'Password Confirm',
 						'class' => 'form-control password',	'style' => ''
 					);
-		$reset = 	array('name' => 'reset', 
-						'id' => 'reset', 
-						'value' => 'Clear', 
-						'class' => 'btn btn-normal', 
+		$reset = 	array('name' => 'reset',
+						'id' => 'reset',
+						'value' => 'Clear',
+						'class' => 'btn btn-normal',
 						'style' => ''
 					);
-		$submit = 	array('name' => 'create_user', 
-						'id' => 'submit', 
-						'value' => 'Submit', 
-						'class' => 'btn btn-cyan', 
+		$submit = 	array('name' => 'create_user',
+						'id' => 'submit',
+						'value' => 'Submit',
+						'class' => 'btn btn-cyan',
 						'style' => ''
 					);
 		$data['form'] =  form_open('user/user_accounts', $form)
@@ -102,9 +102,9 @@ class User extends CI_Controller {
 						.form_input($password1)
 						.form_input($password2)
 						.form_submit($reset)
-						.form_submit($submit) 
+						.form_submit($submit)
 						.form_close();
-		
+
 		/* Get list */
 		$list = $this->User_model->get_user();
 
@@ -120,16 +120,15 @@ class User extends CI_Controller {
 
 		$this->table->set_template($template);
 		$data['user_table'] = $this->table->generate();
-
+		$data['menu'] = $this->load->view('menu', NULL, TRUE);
 		$this->load->view('header');
 		$this->load->view('users/user-accounts', $data);
-		$this->load->view('navbar');
 		$this->load->view('footer');
 	} // user_accounts end
 
 	public function profile($id) {
 		$profile = $this->User_model->get_user($id);
-		
+
 		$this->table->add_row(array('ID', $profile['id']));
 		$this->table->add_row(array('Username', $profile['username']));
 		$this->table->add_row(array('Email', $profile['email']));
@@ -233,13 +232,13 @@ class User extends CI_Controller {
 		$this->table->add_row(array('Email', form_input($email)));
 		$this->table->add_row(array('Password', form_input($password)));
 		$this->table->add_row(array('Password', form_input($password2)));
-		$this->table->add_row(array('&#x270e;', 
-								anchor(site_url().'/user/profile/'.$id, 'Cancel', 'title="Cancel"')."&nbsp;&nbsp;|&nbsp;&nbsp;". 
-								anchor(site_url().'/user/update/'.$id, 'Reset', 'title="Reset"')."&nbsp;&nbsp;|". 
+		$this->table->add_row(array('&#x270e;',
+								anchor(site_url().'/user/profile/'.$id, 'Cancel', 'title="Cancel"')."&nbsp;&nbsp;|&nbsp;&nbsp;".
+								anchor(site_url().'/user/update/'.$id, 'Reset', 'title="Reset"')."&nbsp;&nbsp;|".
 								form_submit($save).form_input($user_id).
 								form_close()
 							));
-		
+
 		$template = array('table_open' => '<table class="table table-striped myTable">');
 		$this->table->set_template($template);
 		$data['profile'] = $this->table->generate();
