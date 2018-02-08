@@ -6,7 +6,6 @@ PROJECT118.dashboard = (function($) {
           $(".slide-list-toggle").click(function(){
                $(this).siblings(".slide-list").slideToggle();
           });
-
 	};
 
 	return {
@@ -17,5 +16,17 @@ PROJECT118.dashboard = (function($) {
 
 jQuery(document).ready(function() {
 	PROJECT118.dashboard.listSlide();
-	$(".login-form").attr("autocomplete", "off"); 
+	$(".login-form").attr("autocomplete", "off");
+	$('#p-date').datetimepicker({
+		format: 'YYYY-MM-DD',
+	});
+	$('#filter-year').datetimepicker({
+		format: 'YYYY',
+	});
+	$('#filter-month').datetimepicker({
+		format: 'MM'
+	});
+	$('#filter-day').datetimepicker({
+		format: 'DD'
+	});
 });

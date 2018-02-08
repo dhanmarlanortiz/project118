@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Project 118</title>
-
     <link href="<?=base_url('assets/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
     <link href="<?=base_url('assets/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?=base_url('assets/styles/css/bootstrap-datetimepicker.min.css')?>" rel="stylesheet">
     <link href="<?=base_url('assets/styles/css/main.css')?>" rel="stylesheet">
   </head>
   <body>

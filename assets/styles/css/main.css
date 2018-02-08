@@ -4,10 +4,25 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* PAYROLL SCSS */
-/* line 3, ../sass/modules/_payroll.scss */
-.create-payslip label {
+/* line 2, ../sass/modules/_payroll.scss */
+td {
   font-family: "OpenSans-Regular", Arial, Sans-Serif;
+}
+
+/* line 5, ../sass/modules/_payroll.scss */
+th {
+  font-family: "OpenSans-Bold", Arial, Sans-Serif;
+}
+
+/* line 9, ../sass/modules/_payroll.scss */
+.create-payslip label {
   font-family: "OpenSans-Regular", Arial, Sans-Serif;
   font-weight: 400;
   font-size: 16px;
@@ -22,7 +37,7 @@
   height: 35px;
   padding-top: 8px;
 }
-/* line 19, ../sass/modules/_payroll.scss */
+/* line 24, ../sass/modules/_payroll.scss */
 .create-payslip input {
   border-radius: 3px;
   height: 35px;
@@ -34,11 +49,11 @@
   float: left;
   text-align: right;
 }
-/* line 30, ../sass/modules/_payroll.scss */
+/* line 35, ../sass/modules/_payroll.scss */
 .create-payslip input[type='submit'], .create-payslip input[type='date'] {
   text-align: center;
 }
-/* line 33, ../sass/modules/_payroll.scss */
+/* line 38, ../sass/modules/_payroll.scss */
 .create-payslip .pee-header, .create-payslip .ped-header {
   float: left;
   clear: left;

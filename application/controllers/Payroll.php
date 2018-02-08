@@ -13,8 +13,9 @@ class Payroll extends CI_Controller {
 	}
 
 	public function index() {
-		$data['payrol_entries_earnings'] = $this->db->get('payrol_entries_earnings')->result_array();
-		$data['payrol_entries_deductions'] = $this->db->get('payrol_entries_deductions')->result_array();
+		$data['payroll_entries_earnings'] = $this->Payroll_model->get_entries('earnings');
+		$data['payroll_entries_deductions'] = $this->Payroll_model->get_entries('deductions');
+		$this->Payroll_model->get_date();
 
 		/* New Payslip Form */
 		$data['create_payslip'] =  form_open('Payroll/create_payslip', array('class' => 'create-payslip'));
@@ -23,11 +24,13 @@ class Payroll extends CI_Controller {
 		form_label('Date', 'pee-date', array('id' => 'pee-date-label')).
 		form_input(array(
 			'name' => 'p-date',
-			'placeholder' => 'date',
-			'type' => 'date',
-			'required' => true
+			'type' => 'text',
+			'id' => 'p-date',
+			'class' => 'date',
+			'required' => true,
+			'placeholder' => 'YYYY-MM-DD'
 		));
-		foreach ($data['payrol_entries_earnings'] as $pee):
+		foreach ($data['payroll_entries_earnings'] as $pee):
 			$data['create_payslip'] .=
 			form_label($pee['name'], 'pee-'.$pee['id'].'-input', array('id' => 'pee-'.$pee['id'].'-label')).
 			form_input(array(
@@ -35,11 +38,11 @@ class Payroll extends CI_Controller {
 				'name' => 'pee-'.$pee['id'],
 				'placeholder' => '0.00',
 				'type' => 'number',
-				'step' => '1',
+				'step' => '0.01'
 			));
 		endforeach;
 		$data['create_payslip'] .= heading('Deductions', 4, 'class="ped-header"');
-		foreach ($data['payrol_entries_deductions'] as $ped):
+		foreach ($data['payroll_entries_deductions'] as $ped):
 			$data['create_payslip'] .=
 			form_label($ped['name'], 'ped-'.$ped['id'].'-input', array('id' => 'ped-'.$ped['id'].'-label')).
 			form_input(array(
@@ -47,7 +50,7 @@ class Payroll extends CI_Controller {
 				'name' => 'ped-'.$ped['id'],
 				'placeholder' => '0.00',
 				'type' => 'number',
-				'step' => '1',
+				'step' => '0.01'
 			));
 		endforeach;
 		$data['create_payslip'] .=
