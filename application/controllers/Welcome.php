@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 					'id' => 'email',
 					'value' => set_value('email'), 'maxlength' => '50',
 					'placeholder' => 'Email',
-					'class' => 'form-control email',
+					'class' => 'email',
 					'style' => ''
 				);
 		$password = array('name' => 'password',
@@ -43,18 +43,17 @@ class Welcome extends CI_Controller {
 					'type' => 'password',
 					'maxlength' => '30',
 					'placeholder' => 'Password',
-					'class' => 'form-control password',
+					'class' => 'password',
 					'size' => '30',
 					'style' => ''
 				);
 		$submit = array('name' => 'login',
 					'id' => 'submit',
 					'value' => 'Sign in',
-					'class' => 'btn btn-primary submit',
+					'class' => 'submit',
 					'style' => ''
 				);
-		$data['form'] =  form_open('welcome', $form).heading('Login', 1, 'class="page-header"')
-						.heading('Please sign in to your account', 5, 'class="form-sub"')
+		$data['form'] =  form_open('welcome', $form)
 						.form_input($email)
 						.form_input($password)
 						.form_submit($submit)

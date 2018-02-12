@@ -59,15 +59,122 @@ th {
   clear: left;
 }
 
-/* line 9, ../sass/main.scss */
-.login-form .form-sub, .user-form .form-sub {
+/* line 7, ../sass/main.scss */
+body {
+  background-color: #569FDF;
+}
+
+/* line 10, ../sass/main.scss */
+#login-container {
+  margin-top: 30vh;
+}
+/* line 12, ../sass/main.scss */
+#login-container img {
+  border-radius: 50%;
+  padding: 5px;
+  max-height: 100px;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+/* line 20, ../sass/main.scss */
+#login-container p {
+  color: #c54d4d;
+  margin: 0 25px;
+}
+/* line 24, ../sass/main.scss */
+#login-container span {
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  margin: 0;
+  display: block;
+  padding: 0 24px;
+}
+@media (min-width: 768px) {
+  /* line 33, ../sass/main.scss */
+  #login-container .wrapper {
+    display: table;
+    width: 100%;
+  }
+  /* line 37, ../sass/main.scss */
+  #login-container .wrapper .left, #login-container .wrapper .right {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  /* line 41, ../sass/main.scss */
+  #login-container .wrapper .left {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  /* line 33, ../sass/main.scss */
+  #login-container .wrapper {
+    display: block;
+  }
+  /* line 47, ../sass/main.scss */
+  #login-container .wrapper .left, #login-container .wrapper .right {
+    display: block;
+  }
+  /* line 50, ../sass/main.scss */
+  #login-container .wrapper .left {
+    padding: 0 25px;
+    margin-bottom: -15px;
+  }
+}
+
+/* line 57, ../sass/main.scss */
+.login-form {
+  padding: 10px 25px 25px;
+}
+/* line 59, ../sass/main.scss */
+.login-form input {
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  display: block;
+  color: #fff;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  height: 40px;
+  font-size: 14px;
+  margin: 5px 0;
+  background-color: #569FDF;
+}
+/* line 72, ../sass/main.scss */
+.login-form input:focus {
+  outline-offset: 0 !important;
+  outline: 0 !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  padding: 0 5px;
+}
+/* line 79, ../sass/main.scss */
+.login-form input::placeholder {
+  color: #fff;
+}
+/* line 83, ../sass/main.scss */
+.login-form input[type="submit"] {
+  width: 100px;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+}
+/* line 87, ../sass/main.scss */
+.login-form input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 94, ../sass/main.scss */
+.user-form .form-sub {
   color: #444444;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   opacity: 0.6;
 }
-/* line 15, ../sass/main.scss */
-.login-form .email, .login-form .password, .login-form .username, .user-form .email, .user-form .password, .user-form .username {
+/* line 100, ../sass/main.scss */
+.user-form .email, .user-form .password, .user-form .username {
   height: 45px;
   border: solid 1px #3f939e;
   margin: 15px 0;
@@ -75,20 +182,20 @@ th {
   background-size: contain;
   padding-left: 50px;
 }
-/* line 23, ../sass/main.scss */
-.login-form .email, .user-form .email {
+/* line 108, ../sass/main.scss */
+.user-form .email {
   background-image: url("../images/icon-envelope.jpg");
 }
-/* line 26, ../sass/main.scss */
-.login-form .username, .user-form .username {
+/* line 111, ../sass/main.scss */
+.user-form .username {
   background-image: url("../images/icon-user.jpg");
 }
-/* line 29, ../sass/main.scss */
-.login-form .password, .user-form .password {
+/* line 114, ../sass/main.scss */
+.user-form .password {
   background-image: url("../images/icon-lock.jpg");
 }
-/* line 32, ../sass/main.scss */
-.login-form .submit, .user-form .submit {
+/* line 117, ../sass/main.scss */
+.user-form .submit {
   background-color: #3f939e;
   border: solid 1px #3f939e;
   width: 100%;
@@ -98,30 +205,30 @@ th {
   font-size: 20px;
   text-transform: uppercase;
 }
-/* line 42, ../sass/main.scss */
-.login-form .submit:hover, .login-form .submit:focus, .user-form .submit:hover, .user-form .submit:focus {
+/* line 127, ../sass/main.scss */
+.user-form .submit:hover, .user-form .submit:focus {
   opacity: 0.8;
 }
-/* line 46, ../sass/main.scss */
-.login-form .btn-cyan, .login-form .btn-normal, .user-form .btn-cyan, .user-form .btn-normal {
+/* line 131, ../sass/main.scss */
+.user-form .btn-cyan, .user-form .btn-normal {
   border: solid 1px #3f939e;
 }
-/* line 48, ../sass/main.scss */
-.login-form .btn-cyan:hover, .login-form .btn-normal:hover, .user-form .btn-cyan:hover, .user-form .btn-normal:hover {
+/* line 133, ../sass/main.scss */
+.user-form .btn-cyan:hover, .user-form .btn-normal:hover {
   opacity: 0.8;
 }
-/* line 52, ../sass/main.scss */
-.login-form .btn-cyan, .user-form .btn-cyan {
+/* line 137, ../sass/main.scss */
+.user-form .btn-cyan {
   background-color: #3f939e;
   color: #fff;
 }
-/* line 56, ../sass/main.scss */
-.login-form .btn-normal, .user-form .btn-normal {
+/* line 141, ../sass/main.scss */
+.user-form .btn-normal {
   background-color: #fff;
   color: #3f939e;
 }
 
-/* line 61, ../sass/main.scss */
+/* line 146, ../sass/main.scss */
 .page-header {
   color: #3f939e;
   font-family: Arial, Helvetica, sans-serif;
@@ -129,19 +236,19 @@ th {
   margin-bottom: 30px;
 }
 
-/* line 67, ../sass/main.scss */
+/* line 152, ../sass/main.scss */
 .section-title {
   color: #3f939e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-/* line 72, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
 .myTable {
   border: dashed 1px #3f939e;
   margin-top: 15px;
 }
-/* line 75, ../sass/main.scss */
+/* line 160, ../sass/main.scss */
 .myTable thead tr th {
   font-size: 16px;
   color: #fff;
@@ -150,7 +257,7 @@ th {
   border-bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* line 83, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .myTable tbody tr td {
   border-top: 0;
   font-family: Arial, Helvetica, sans-serif;

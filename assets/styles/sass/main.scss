@@ -4,8 +4,93 @@ $blue: #268cb7;
 $cyan: #3f939e;
 @import "libs/fonts";
 @import "modules/payroll";
+body {
+     background-color: #569FDF;
+}
+#login-container {
+     margin-top: 30vh;
+     img {
+          border-radius: 50%;
+          padding: 5px;
+          max-height: 100px;
+          max-width: 100px;
+          margin: 0 auto;
+          display: block;
+     }
+     p {
+          color: #c54d4d;
+          margin: 0 25px;
+     }
+     span {
+          font-size: 24px;
+          color: #fff;
+          text-transform: uppercase;
+          font-family: $OpenSans-Regular;
+          margin: 0;
+          display: block;
+          padding: 0 24px;
+     }
+     .wrapper {
+          @media (min-width: 768px) {
+               display: table;
+               width: 100%;
+               .left, .right {
+                    vertical-align: middle;
+                    display: table-cell;
+               }
+               .left {
+                    text-align: center;
+               }
+          }
+          @media (max-width: 767px) {
+               display: block;
+               .left, .right {
+                    display: block;
+               }
+               .left {
+                    padding: 0 25px;
+                    margin-bottom: -15px;
+               }
+          }
+     }
+}
+.login-form {
+     padding: 10px 25px 25px;
+     input {
+          font-family: $OpenSans-Regular;
+          display: block;
+          color: #fff;
+          width: 100%;
+          border-top: 0;
+          border-left: 0;
+          border-right: 0;
+          border-bottom: solid 1px rgba(255,255,255,0.5);
+          height: 40px;
+          font-size: 14px;
+          margin: 5px 0;
+          background-color: #569FDF;
+          &:focus {
+               outline-offset: 0 !important;
+               outline: 0 !important;
+               background-color: rgba(255,255,255,0.2);
+               border: 0;
+               padding: 0 5px;
+          }
+          &::placeholder {
+               color: #fff;
+          }
+     }
+     input[type="submit"] {
+          width: 100px;
+          border: solid 1px rgba(255,255,255,0.5);
+          margin-top: 20px;
+          &:hover {
+               background-color: rgba(255,255,255,0.2);
+          }
+     }
 
-.login-form, .user-form {
+}
+.user-form {
     .form-sub {
         color: #444444;
         font-family: $helvetica;
