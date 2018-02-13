@@ -59,9 +59,7 @@ class Welcome extends CI_Controller {
 						.form_submit($submit)
 						.form_close();
 
-		$this->load->view('header');
 		$this->load->view('login-page', $data);
-		$this->load->view('footer');
 	}
 
 }

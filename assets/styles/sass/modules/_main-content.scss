@@ -1,0 +1,31 @@
+/* main-content */
+
+.main-content {
+     background-color: #fff;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     h5 {
+          font-size: 16px;
+          color: #00aeef;
+          font-family: $OpenSans-Bold;
+          text-transform: uppercase;
+          margin: 0;
+     }
+     .content-navtabs {
+          padding: 0;
+          background-color: #ccc;
+          li {
+               list-style: none;
+               display: inline-block;
+               a {
+                    font-size: 16px;
+                    font-family: $OpenSans-Bold;
+                    color: #00aeef;
+                    &:hover, &:focus {
+                         text-decoration: none;
+                    }
+               }
+          }
+     }
+
+}

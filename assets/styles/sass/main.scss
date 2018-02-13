@@ -2,10 +2,26 @@ $helvetica: Arial, Helvetica, sans-serif;
 $black: "Arial Black", Gadget, sans-serif;
 $blue: #268cb7;
 $cyan: #3f939e;
+
 @import "libs/fonts";
+@import "modules/navbar";
+@import "modules/sidebar";
+@import "modules/main-content";
 @import "modules/payroll";
+
 body {
-     background-color: #569FDF;
+     background-color: #f8f8f8;
+     &#login-page {
+          background-color: #569FDF;
+     }
+}
+.no-gutters {
+     [class*="col-"] {
+          padding: 0;
+     }
+}
+.page {
+     background-color: #fff;
 }
 #login-container {
      margin-top: 30vh;
@@ -74,7 +90,7 @@ body {
                outline: 0 !important;
                background-color: rgba(255,255,255,0.2);
                border: 0;
-               padding: 0 5px;
+               text-indent: 10px;
           }
           &::placeholder {
                color: #fff;

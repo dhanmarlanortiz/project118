@@ -1,0 +1,42 @@
+/* SIDEBAR */
+.sidebar {
+     padding-top: 20px;
+     ul {
+          margin: 0;
+          padding: 0;
+          li {
+               list-style: none;
+               a {
+                    font-family: $OpenSans-Regular;
+                    font-size: 16px;
+                    display: block;
+                    padding: 5px 0px;
+                    color: #ccc;
+                    &:hover, &:focus {
+                         text-decoration: none;
+                    }
+               }
+               &.active {
+                    background-color: #fff;
+                    >a {
+                         color: #00aeef;
+                         // border-right: solid 2px #00aeef;
+                    }
+                    .sub-menu {
+                         display: block;
+                    }
+               }
+          }
+     }
+     .sub-menu {
+          display: none;
+          text-indent: 20px;
+          li a {
+               font-size: 14px;
+               padding: 0;
+               color: #5cbcf6;
+          }
+     }
+     //5cbcf6 lighter
+     //49a7df darker
+}

@@ -1,43 +1,142 @@
 /* PAYROLL SCSS */
-td {
-     font-family: $OpenSans-Regular;
+.btn1 {
+     background-color: #00aeef;
+     border-radius: 5px;
+     box-shadow: 0px 5px #03a1dc;
+     border: none;
+     color: #fff;
+     height: 30px;
+     padding: 7px 14px;
+     &:hover, &:focus {
+          text-decoration: none;
+          color: #fff;
+     }
 }
-th {
-     font-family: $OpenSans-Bold;
+.payslip-table {
+     width: 100%;
+     border: solid 1px #f6f6f6;
+     thead {
+          border-bottom: solid 2px #00aeef;
+          th {
+               font-family: $OpenSans-Bold;
+               color: #666;
+               font-size: 14px;
+               padding: 15px 20px 5px;
+          }
+     }
+     tbody {
+          tr {
+               border-bottom: solid 1px #f6f6f6;
+          }
+          td {
+               padding: 5px 20px;
+               font-family: $OpenSans-Regular;
+               font-size: 14px;
+          }
+          th {
+               padding: 5px 20px;
+               font-family: $OpenSans-Bold;
+               font-size: 14px;
+          }
+     }
+}
+.filter-payslip {
+     input {
+          border-top: 0;
+          border-left: 0;
+          border-right: 0;
+          border-bottom: solid 1px #ccc;
+          width: 50px;
+          margin-right: 10px;
+          font-family: $OpenSans-Regular;
+          font-size: 12px;
+          color: #555;
+          text-align: center;
+          &:focus {
+               outline: none;
+          }
+     }
+     label {
+          font-family: $OpenSans-Regular;
+          font-size: 14px;
+          color: #555;
+          font-weight: 400;
+     }
+     button, a {
+          background-color: transparent;
+          border: none;
+          font-family: $OpenSans-Regular;
+          font-size: 14px;
+          color: #555;
+          &:focus {
+               outline: none;
+          }
+          &:hover {
+               color: #00aeef;
+          }
+     }
 }
 .create-payslip {
      label {
           font-family: $OpenSans-Regular;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 14px;
           margin-bottom: 0px;
-          width: 100%;
-          max-width: 250px;
+          width: 70%;
           float: left;
           clear: left;
-          text-align: right;
-          padding-right: 10px;
+          text-align: left;
+          padding: 5px 20px;
           vertical-align: middle;
-          height: 35px;
-          padding-top: 8px;
+          height: 30px;
+          border-bottom: solid 1px #f6f6f6;
+          border-left: solid 1px #f6f6f6;
      }
      input {
-          border-radius: 3px;
-          height: 35px;
-          border: solid 1px #cccccc;
-          width: 100%;
-          max-width: 150px;
-          margin-bottom: 15px;
-          padding: 0 5px;
+          height: 30px;
+          border: none;
+          border-bottom: solid 1px #f6f6f6;
+          border-right: solid 1px #f6f6f6;
+          width: 30%;
+          padding: 5px 20px;
           float: left;
           text-align: right;
+          &:focus {
+               outline: none;
+          }
      }
      input[type='submit'], input[type='date'] {
           text-align: center;
      }
+     #p-submit-label {
+          visibility: hidden;
+     }
+     #p-date {
+          text-align: center;
+          font-size: 12px;
+     }
+     input[type='submit'] {
+          margin: 30px 0;
+          background-color: #00aeef;
+          border-radius: 5px;
+          box-shadow: 0px 5px #03a1dc;
+          border: none;
+          color: #fff;
+     }
      .pee-header, .ped-header {
           float: left;
           clear: left;
+          font-family: $OpenSans-Bold;
+          color: #666;
+          font-size: 14px;
+          padding: 16px 20px 8px;
+          width: 100%;
+          border-bottom: solid 2px #00aeef;
+          border-top: solid 1px #f6f6f6;
+          border-left: solid 1px #f6f6f6;
+          border-right: solid 1px #f6f6f6;
+          text-transform: uppercase;
+          margin: 0;
      }
 
 }

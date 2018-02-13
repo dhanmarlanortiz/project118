@@ -10,65 +10,325 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url("../fonts/Montserrat-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* navbar */
+/* line 2, ../sass/modules/_navbar.scss */
+nav {
+  background-color: #00aeef;
+  border-bottom: solid 3px #03a1dc;
+}
+
+/* line 6, ../sass/modules/_navbar.scss */
+.pre-head {
+  color: #fff;
+  font-size: 28px;
+  font-family: "Arial Black";
+  line-height: 1em;
+  margin-top: 10px;
+  text-shadow: 0px 3px #03a1dc;
+}
+
+/* line 14, ../sass/modules/_navbar.scss */
+.pre-head span {
+  font-family: "Arial";
+  font-weight: 400;
+  color: #fff;
+}
+
+/* SIDEBAR */
+/* line 2, ../sass/modules/_sidebar.scss */
+.sidebar {
+  padding-top: 20px;
+}
+/* line 4, ../sass/modules/_sidebar.scss */
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 7, ../sass/modules/_sidebar.scss */
+.sidebar ul li {
+  list-style: none;
+}
+/* line 9, ../sass/modules/_sidebar.scss */
+.sidebar ul li a {
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-size: 16px;
+  display: block;
+  padding: 5px 0px;
+  color: #ccc;
+}
+/* line 15, ../sass/modules/_sidebar.scss */
+.sidebar ul li a:hover, .sidebar ul li a:focus {
+  text-decoration: none;
+}
+/* line 19, ../sass/modules/_sidebar.scss */
+.sidebar ul li.active {
+  background-color: #fff;
+}
+/* line 21, ../sass/modules/_sidebar.scss */
+.sidebar ul li.active > a {
+  color: #00aeef;
+}
+/* line 25, ../sass/modules/_sidebar.scss */
+.sidebar ul li.active .sub-menu {
+  display: block;
+}
+/* line 31, ../sass/modules/_sidebar.scss */
+.sidebar .sub-menu {
+  display: none;
+  text-indent: 20px;
+}
+/* line 34, ../sass/modules/_sidebar.scss */
+.sidebar .sub-menu li a {
+  font-size: 14px;
+  padding: 0;
+  color: #5cbcf6;
+}
+
+/* main-content */
+/* line 3, ../sass/modules/_main-content.scss */
+.main-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 7, ../sass/modules/_main-content.scss */
+.main-content h5 {
+  font-size: 16px;
+  color: #00aeef;
+  font-family: "OpenSans-Bold", Arial, Sans-Serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* line 14, ../sass/modules/_main-content.scss */
+.main-content .content-navtabs {
+  padding: 0;
+  background-color: #ccc;
+}
+/* line 17, ../sass/modules/_main-content.scss */
+.main-content .content-navtabs li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 20, ../sass/modules/_main-content.scss */
+.main-content .content-navtabs li a {
+  font-size: 16px;
+  font-family: "OpenSans-Bold", Arial, Sans-Serif;
+  color: #00aeef;
+}
+/* line 24, ../sass/modules/_main-content.scss */
+.main-content .content-navtabs li a:hover, .main-content .content-navtabs li a:focus {
+  text-decoration: none;
+}
+
 /* PAYROLL SCSS */
 /* line 2, ../sass/modules/_payroll.scss */
-td {
-  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+.btn1 {
+  background-color: #00aeef;
+  border-radius: 5px;
+  box-shadow: 0px 5px #03a1dc;
+  border: none;
+  color: #fff;
+  height: 30px;
+  padding: 7px 14px;
+}
+/* line 10, ../sass/modules/_payroll.scss */
+.btn1:hover, .btn1:focus {
+  text-decoration: none;
+  color: #fff;
 }
 
-/* line 5, ../sass/modules/_payroll.scss */
-th {
+/* line 15, ../sass/modules/_payroll.scss */
+.payslip-table {
+  width: 100%;
+  border: solid 1px #f6f6f6;
+}
+/* line 18, ../sass/modules/_payroll.scss */
+.payslip-table thead {
+  border-bottom: solid 2px #00aeef;
+}
+/* line 20, ../sass/modules/_payroll.scss */
+.payslip-table thead th {
   font-family: "OpenSans-Bold", Arial, Sans-Serif;
+  color: #666;
+  font-size: 14px;
+  padding: 15px 20px 5px;
+}
+/* line 28, ../sass/modules/_payroll.scss */
+.payslip-table tbody tr {
+  border-bottom: solid 1px #f6f6f6;
+}
+/* line 31, ../sass/modules/_payroll.scss */
+.payslip-table tbody td {
+  padding: 5px 20px;
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-size: 14px;
+}
+/* line 36, ../sass/modules/_payroll.scss */
+.payslip-table tbody th {
+  padding: 5px 20px;
+  font-family: "OpenSans-Bold", Arial, Sans-Serif;
+  font-size: 14px;
 }
 
-/* line 9, ../sass/modules/_payroll.scss */
+/* line 44, ../sass/modules/_payroll.scss */
+.filter-payslip input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: solid 1px #ccc;
+  width: 50px;
+  margin-right: 10px;
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+/* line 55, ../sass/modules/_payroll.scss */
+.filter-payslip input:focus {
+  outline: none;
+}
+/* line 59, ../sass/modules/_payroll.scss */
+.filter-payslip label {
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-size: 14px;
+  color: #555;
+  font-weight: 400;
+}
+/* line 65, ../sass/modules/_payroll.scss */
+.filter-payslip button, .filter-payslip a {
+  background-color: transparent;
+  border: none;
+  font-family: "OpenSans-Regular", Arial, Sans-Serif;
+  font-size: 14px;
+  color: #555;
+}
+/* line 71, ../sass/modules/_payroll.scss */
+.filter-payslip button:focus, .filter-payslip a:focus {
+  outline: none;
+}
+/* line 74, ../sass/modules/_payroll.scss */
+.filter-payslip button:hover, .filter-payslip a:hover {
+  color: #00aeef;
+}
+
+/* line 80, ../sass/modules/_payroll.scss */
 .create-payslip label {
   font-family: "OpenSans-Regular", Arial, Sans-Serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 0px;
-  width: 100%;
-  max-width: 250px;
+  width: 70%;
   float: left;
   clear: left;
-  text-align: right;
-  padding-right: 10px;
+  text-align: left;
+  padding: 5px 20px;
   vertical-align: middle;
-  height: 35px;
-  padding-top: 8px;
+  height: 30px;
+  border-bottom: solid 1px #f6f6f6;
+  border-left: solid 1px #f6f6f6;
 }
-/* line 24, ../sass/modules/_payroll.scss */
+/* line 95, ../sass/modules/_payroll.scss */
 .create-payslip input {
-  border-radius: 3px;
-  height: 35px;
-  border: solid 1px #cccccc;
-  width: 100%;
-  max-width: 150px;
-  margin-bottom: 15px;
-  padding: 0 5px;
+  height: 30px;
+  border: none;
+  border-bottom: solid 1px #f6f6f6;
+  border-right: solid 1px #f6f6f6;
+  width: 30%;
+  padding: 5px 20px;
   float: left;
   text-align: right;
 }
-/* line 35, ../sass/modules/_payroll.scss */
+/* line 104, ../sass/modules/_payroll.scss */
+.create-payslip input:focus {
+  outline: none;
+}
+/* line 108, ../sass/modules/_payroll.scss */
 .create-payslip input[type='submit'], .create-payslip input[type='date'] {
   text-align: center;
 }
-/* line 38, ../sass/modules/_payroll.scss */
+/* line 111, ../sass/modules/_payroll.scss */
+.create-payslip #p-submit-label {
+  visibility: hidden;
+}
+/* line 114, ../sass/modules/_payroll.scss */
+.create-payslip #p-date {
+  text-align: center;
+  font-size: 12px;
+}
+/* line 118, ../sass/modules/_payroll.scss */
+.create-payslip input[type='submit'] {
+  margin: 30px 0;
+  background-color: #00aeef;
+  border-radius: 5px;
+  box-shadow: 0px 5px #03a1dc;
+  border: none;
+  color: #fff;
+}
+/* line 126, ../sass/modules/_payroll.scss */
 .create-payslip .pee-header, .create-payslip .ped-header {
   float: left;
   clear: left;
+  font-family: "OpenSans-Bold", Arial, Sans-Serif;
+  color: #666;
+  font-size: 14px;
+  padding: 16px 20px 8px;
+  width: 100%;
+  border-bottom: solid 2px #00aeef;
+  border-top: solid 1px #f6f6f6;
+  border-left: solid 1px #f6f6f6;
+  border-right: solid 1px #f6f6f6;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-/* line 7, ../sass/main.scss */
+/* line 12, ../sass/main.scss */
 body {
+  background-color: #f8f8f8;
+}
+/* line 14, ../sass/main.scss */
+body#login-page {
   background-color: #569FDF;
 }
 
-/* line 10, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
+.no-gutters [class*="col-"] {
+  padding: 0;
+}
+
+/* line 23, ../sass/main.scss */
+.page {
+  background-color: #fff;
+}
+
+/* line 26, ../sass/main.scss */
 #login-container {
   margin-top: 30vh;
 }
-/* line 12, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 #login-container img {
   border-radius: 50%;
   padding: 5px;
@@ -77,12 +337,12 @@ body {
   margin: 0 auto;
   display: block;
 }
-/* line 20, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 #login-container p {
   color: #c54d4d;
   margin: 0 25px;
 }
-/* line 24, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 #login-container span {
   font-size: 24px;
   color: #fff;
@@ -93,42 +353,42 @@ body {
   padding: 0 24px;
 }
 @media (min-width: 768px) {
-  /* line 33, ../sass/main.scss */
+  /* line 49, ../sass/main.scss */
   #login-container .wrapper {
     display: table;
     width: 100%;
   }
-  /* line 37, ../sass/main.scss */
+  /* line 53, ../sass/main.scss */
   #login-container .wrapper .left, #login-container .wrapper .right {
     vertical-align: middle;
     display: table-cell;
   }
-  /* line 41, ../sass/main.scss */
+  /* line 57, ../sass/main.scss */
   #login-container .wrapper .left {
     text-align: center;
   }
 }
 @media (max-width: 767px) {
-  /* line 33, ../sass/main.scss */
+  /* line 49, ../sass/main.scss */
   #login-container .wrapper {
     display: block;
   }
-  /* line 47, ../sass/main.scss */
+  /* line 63, ../sass/main.scss */
   #login-container .wrapper .left, #login-container .wrapper .right {
     display: block;
   }
-  /* line 50, ../sass/main.scss */
+  /* line 66, ../sass/main.scss */
   #login-container .wrapper .left {
     padding: 0 25px;
     margin-bottom: -15px;
   }
 }
 
-/* line 57, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 .login-form {
   padding: 10px 25px 25px;
 }
-/* line 59, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .login-form input {
   font-family: "OpenSans-Regular", Arial, Sans-Serif;
   display: block;
@@ -143,37 +403,37 @@ body {
   margin: 5px 0;
   background-color: #569FDF;
 }
-/* line 72, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 .login-form input:focus {
   outline-offset: 0 !important;
   outline: 0 !important;
   background-color: rgba(255, 255, 255, 0.2);
   border: 0;
-  padding: 0 5px;
+  text-indent: 10px;
 }
-/* line 79, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 .login-form input::placeholder {
   color: #fff;
 }
-/* line 83, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .login-form input[type="submit"] {
   width: 100px;
   border: solid 1px rgba(255, 255, 255, 0.5);
   margin-top: 20px;
 }
-/* line 87, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 .login-form input[type="submit"]:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 94, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 .user-form .form-sub {
   color: #444444;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   opacity: 0.6;
 }
-/* line 100, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 .user-form .email, .user-form .password, .user-form .username {
   height: 45px;
   border: solid 1px #3f939e;
@@ -182,19 +442,19 @@ body {
   background-size: contain;
   padding-left: 50px;
 }
-/* line 108, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 .user-form .email {
   background-image: url("../images/icon-envelope.jpg");
 }
-/* line 111, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 .user-form .username {
   background-image: url("../images/icon-user.jpg");
 }
-/* line 114, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 .user-form .password {
   background-image: url("../images/icon-lock.jpg");
 }
-/* line 117, ../sass/main.scss */
+/* line 133, ../sass/main.scss */
 .user-form .submit {
   background-color: #3f939e;
   border: solid 1px #3f939e;
@@ -205,30 +465,30 @@ body {
   font-size: 20px;
   text-transform: uppercase;
 }
-/* line 127, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 .user-form .submit:hover, .user-form .submit:focus {
   opacity: 0.8;
 }
-/* line 131, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 .user-form .btn-cyan, .user-form .btn-normal {
   border: solid 1px #3f939e;
 }
-/* line 133, ../sass/main.scss */
+/* line 149, ../sass/main.scss */
 .user-form .btn-cyan:hover, .user-form .btn-normal:hover {
   opacity: 0.8;
 }
-/* line 137, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
 .user-form .btn-cyan {
   background-color: #3f939e;
   color: #fff;
 }
-/* line 141, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
 .user-form .btn-normal {
   background-color: #fff;
   color: #3f939e;
 }
 
-/* line 146, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .page-header {
   color: #3f939e;
   font-family: Arial, Helvetica, sans-serif;
@@ -236,19 +496,19 @@ body {
   margin-bottom: 30px;
 }
 
-/* line 152, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .section-title {
   color: #3f939e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-/* line 157, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 .myTable {
   border: dashed 1px #3f939e;
   margin-top: 15px;
 }
-/* line 160, ../sass/main.scss */
+/* line 176, ../sass/main.scss */
 .myTable thead tr th {
   font-size: 16px;
   color: #fff;
@@ -257,7 +517,7 @@ body {
   border-bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* line 168, ../sass/main.scss */
+/* line 184, ../sass/main.scss */
 .myTable tbody tr td {
   border-top: 0;
   font-family: Arial, Helvetica, sans-serif;
